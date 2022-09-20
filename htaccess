@@ -1,0 +1,50 @@
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+DirectoryIndex index.html
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^privacypolicy$ page3176988.html [NC]
+RewriteRule ^privacypolicy/$ page3176988.html [NC]
+
+RewriteRule ^hearing-test$ page9286214.html [NC]
+RewriteRule ^hearing-test/$ page9286214.html [NC]
+
+RewriteRule ^about-us/$ page10048795.html [NC]
+RewriteRule ^about-us//$ page10048795.html [NC]
+
+RewriteRule ^price/$ page10048825.html [NC]
+RewriteRule ^price//$ page10048825.html [NC]
+
+RewriteRule ^en$ page20529207.html [NC]
+RewriteRule ^en/$ page20529207.html [NC]
+
+RewriteRule ^hearing-test-en$ page20535132.html [NC]
+RewriteRule ^hearing-test-en/$ page20535132.html [NC]
+
+RewriteRule ^hearing-test-sa$ page24667324.html [NC]
+RewriteRule ^hearing-test-sa/$ page24667324.html [NC]
+
+RewriteRule ^ua$ page29672195.html [NC]
+RewriteRule ^ua/$ page29672195.html [NC]
+
+RewriteRule ^hearing-test-ua$ page29698767.html [NC]
+RewriteRule ^hearing-test-ua/$ page29698767.html [NC]
+
+RewriteRule ^about-us-ua$ page30357013.html [NC]
+RewriteRule ^about-us-ua/$ page30357013.html [NC]
+
+RewriteRule ^price-ua$ page30357690.html [NC]
+RewriteRule ^price-ua/$ page30357690.html [NC]
+
+RewriteRule ^polityka-konfidentsiynosti$ page30358238.html [NC]
+RewriteRule ^polityka-konfidentsiynosti/$ page30358238.html [NC]
+
+
